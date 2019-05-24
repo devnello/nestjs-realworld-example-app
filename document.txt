@@ -1,0 +1,5 @@
+CREATE USER 'nestjsrealworld'@'localhost' IDENTIFIED BY 'msp2017';
+
+GRANT ALL ON *.* TO 'nestjsrealworld'@'localhost';
+
+FLUSH PRIVILEGES;
