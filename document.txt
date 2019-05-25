@@ -3,3 +3,25 @@ CREATE USER 'nestjsrealworld'@'localhost' IDENTIFIED BY 'msp2017';
 GRANT ALL ON *.* TO 'nestjsrealworld'@'localhost';
 
 FLUSH PRIVILEGES;
+
+
+
+// Request: http://localhost:3000/api/users
+{
+  "user": {
+    "email": "jake@jake.jake",
+    "password": "123456",
+    "username": "devnello"
+  }
+}
+
+Response:
+{
+    "user": {
+        "username": "devnello",
+        "email": "jake@jake.jake",
+        "bio": "",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJkZXZuZWxsbyIsImVtYWlsIjoiamFrZUBqYWtlLmpha2UiLCJleHAiOjE1NjM5MzEyNDAuMDU0LCJpYXQiOjE1NTg3NDcyNDB9.dlErihiba-2tghjSZAsCxTc9_0bBw1wZN29zmoixWrI",
+        "image": ""
+    }
+}
