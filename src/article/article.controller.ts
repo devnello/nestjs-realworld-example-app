@@ -20,6 +20,13 @@ export class ArticleController {
 
   constructor(private readonly articleService: ArticleService) {}
 
+  @ApiOperation({ title: 'Get all articles 2' })
+  @ApiResponse({ status: 200, description: 'Return all articles. 2'})
+  @Get('dos')
+  async findAll2(): Promise<{}> {
+    return await this.articleService.findAll2();
+  }
+
   @ApiOperation({ title: 'Get all articles' })
   @ApiResponse({ status: 200, description: 'Return all articles.'})
   @Get()
